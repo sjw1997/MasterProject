@@ -1,7 +1,7 @@
 public class DirectedGraph extends Graph {
 
-    public DirectedGraph(int V) {
-        super(V);
+    public DirectedGraph(In in) {
+        super(in);
     }
 
     public void addEdge(int from, int to, double weight) {

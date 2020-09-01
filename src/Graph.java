@@ -16,6 +16,15 @@ public abstract class Graph {
         }
     }
 
+    public Graph(In in) {
+        this(in.readInt());
+        while (in.hasNextLine()) {
+            int v = in.readInt(), w = in.readInt();
+            double weight = in.readDouble();
+            addEdge(v, w, weight);
+        }
+    }
+
     public Graph() {}
 
     public int V() {

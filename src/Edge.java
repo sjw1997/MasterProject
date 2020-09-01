@@ -22,6 +22,10 @@ public class Edge {
         return weight;
     }
 
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
     @Override
     public String toString() {
         return String.format("%d->%d %.2f", from, to, weight);
