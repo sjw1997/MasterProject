@@ -1,3 +1,5 @@
+import edu.princeton.cs.algs4.IndexMinPQ;
+
 public class ShortestPath {
 
     private double[] distTo;
