@@ -2,7 +2,6 @@ public class ShortestPath {
 
     private double[] distTo;
     private Edge[] edgeTo;
-    private int source;
     private IndexMinPQ<Double> pq;
 
     public ShortestPath(Graph G, int source) {
@@ -10,8 +9,6 @@ public class ShortestPath {
         distTo = new double[V];
         edgeTo = new Edge[V];
         pq = new IndexMinPQ<>(V);
-        this.source = source;
-
         for (int v = 0; v < V; v++) {
             distTo[v] = Double.POSITIVE_INFINITY;
         }

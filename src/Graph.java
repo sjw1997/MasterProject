@@ -3,8 +3,8 @@ import java.util.List;
 
 public abstract class Graph {
 
-    protected int V;              // number of vertices
-    protected int E;              // number of edges
+    protected int V;                // number of vertices
+    protected int E;                // number of edges
     protected List<Edge>[] adj;     // adjacency lists
 
     public Graph(int V) {
@@ -18,7 +18,7 @@ public abstract class Graph {
 
     public Graph(In in) {
         this(in.readInt());
-        while (in.hasNextLine()) {
+        while (!in.isEmpty()) {
             int v = in.readInt(), w = in.readInt();
             double weight = in.readDouble();
             addEdge(v, w, weight);
@@ -41,4 +41,16 @@ public abstract class Graph {
     }
 
     public abstract void addEdge(int v, int w, double weight);
+
+    public String toString() {
+        StringBuilder res = new StringBuilder();
+        for (int v = 0; v < V; v++) {
+            res.append(v + ": ");
+            for (Edge e : adj(v)) {
+                res.append(e + " ");
+            }
+            res.append("\n");
+        }
+        return res.toString();
+    }
 }
