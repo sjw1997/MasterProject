@@ -42,6 +42,7 @@ public abstract class Graph {
 
     public abstract void addEdge(int v, int w, double weight);
 
+    @Override
     public String toString() {
         StringBuilder res = new StringBuilder();
         for (int v = 0; v < V; v++) {

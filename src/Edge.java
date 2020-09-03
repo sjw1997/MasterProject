@@ -1,7 +1,7 @@
 public class Edge {
 
-    private int from;
-    private int to;
+    private final int from;
+    private final int to;
     private double weight;
 
     public Edge(int from, int to, double weight) {
